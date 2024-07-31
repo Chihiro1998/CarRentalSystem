@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "car_rental_angular": {
+    "Car_Rental_Angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -17,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/car_rental_angular",
+            "outputPath": "dist/car-rental-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -40,12 +47,7 @@
               "src/theme.less",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -75,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "car_rental_angular:build:production"
+              "buildTarget": "Car_Rental_Angular:build:production"
             },
             "development": {
-              "buildTarget": "car_rental_angular:build:development"
+              "buildTarget": "Car_Rental_Angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -111,6 +113,6 @@
     }
   },
   "cli": {
-    "analytics": "e9578e72-78da-41d9-b4f5-6b544a1815a7"
+    "analytics": "24fc3c9c-1b8c-4e94-91d8-e1c01cd2a60b"
   }
 }

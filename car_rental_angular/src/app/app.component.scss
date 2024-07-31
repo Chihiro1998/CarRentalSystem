@@ -1,0 +1,31 @@
+.custom-nvbar {
+  background-color: #003973;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-title {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title a {
+  color: white !important;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 10px; /* 可以根据需要调整 */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 15px;
+}
